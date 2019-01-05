@@ -8,3 +8,5 @@ BL4752MQTT.py is ein kleines script das versucht von einem STM32 IOT device B-L4
 mqtT_mpws.py ist der Python code enthalten, der von den Teilnehmer im Handson entwickelt werden kann.
 
 flash_ws.sh wird auch auf dem RasPi benoetigt um ein esp8266 zu programmieren. Ferner wird der esptools folder aus dem git@github.com:pfalcon/esp-open-sdk.git repo auf dem RasPi beoetigt. 
+
+Zum Aufsetzen von des RasPi als Acess point siehe https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md
