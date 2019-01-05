@@ -1,0 +1,4 @@
+ 
+SSID="MicroPythonWS" 
+PASSWORD="d5f8ed7a"
+MQTT_BROKER="192.168.4.1"
