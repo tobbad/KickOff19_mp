@@ -44,7 +44,6 @@ def do_connect():
 
 
 mqttc = None
-
 # Received messages from subscriptions will be delivered to this callback
 def sub_cb(topic, msg):
     print((topic, msg))
