@@ -2,7 +2,7 @@ from machine import Pin, PWM
 #
 # Topic 1:
 #
-# Led control
+# Led control PWM
 #
 class Led:
     
@@ -24,13 +24,10 @@ class Led:
 
 #
 # Topic 2 
-# MQTT subscribe
+# WLAN Verbindung
 #
-from config import * # Get SSID and PASSWORD and MQTT broker ip
+from config import * # Get SSID and PASSWORD and MQTT_BROKER ip
 import network
-from mqtt import MQTTClient
-import time
-
 
 def do_connect():
     wlan = network.WLAN(network.STA_IF)
@@ -42,6 +39,12 @@ def do_connect():
             pass
     print('network config:', wlan.ifconfig())
 
+#
+# Topic 3 
+# MQTT subscribe
+#
+from mqtt import MQTTClient
+import time
 
 mqttc = None
 # Received messages from subscriptions will be delivered to this callback
@@ -67,3 +70,12 @@ def mqtt_listen(server=MQTT_BROKER):
 
     mqttc.disconnect()
 
+#
+# Topic 3 
+# MQTT publish
+#
+def mqtt_publish(server=MQTT_BROKER):
+    c = MQTTClient("umqtt_client", server)
+    c.connect()
+    c.publish(b"client", b"hello")
+    c.disconnect()
