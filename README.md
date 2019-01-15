@@ -3,6 +3,8 @@ Files for Kick off 2019
 
 Files unterhalb modules sollten vor dem Kompilieren von micropython nach /ports/esp8266/modules kopiert werden.
 
+[Hier](https://media.readthedocs.org/pdf/micropython-on-esp8266-workshop/latest/micropython-on-esp8266-workshop.pdf) gibt es ein Dokumentation zu einem anderen ESP8266 Workshop.
+ 
 BL4752MQTT.py is ein kleines script das versucht von einem STM32 IOT device B-L475E-IOT01A23 die sensor daten zu lesen und sie auf dem MQTT_Broker zu publizieren. Da die STM Software nicht so stabil laeuft, werden die daten bei einem HTTP request der ins Timeout laeuft gefaked.
 
 mqtT_mpws.py ist der Python code enthalten, der von den Teilnehmer im Handson entwickelt werden kann. Unter dieser [Micropythonseite](https://docs.micropython.org/en/latest/esp8266/quickref.html) ist die Referenz zum esp8266 MP zu finden. Das Github von Micropython ist [hier](https://github.com/micropython/micropython).
